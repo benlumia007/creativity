@@ -34,8 +34,8 @@ function render_cp_link( array $args = [] ) {
 	$html = sprintf(
 		'<a class="%1$s" href="%2$s">%3$s</a>',
 		esc_attr( $args['class'] ),
-		esc_url( __( 'https://classicpress.net', 'succotash' ) ),
-		sprintf( $args['text'], esc_html__( 'ClassicPress', 'succotash' ) )
+		esc_url( __( 'https://classicpress.net', 'creativity' ) ),
+		sprintf( $args['text'], esc_html__( 'ClassicPress', 'creativity' ) )
 	);
 	return apply_filters( 'creativity/render/cp/link', $html );
 }

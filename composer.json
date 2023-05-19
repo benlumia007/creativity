@@ -17,6 +17,7 @@
 			"Creativity\\": "app"
 		},
 		"files": [
+			"app/Site/functions-site.php",
 			"app/framework.php",
 			"app/functions-extras.php",
 			"app/functions-scripts.php",
