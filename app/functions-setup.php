@@ -47,3 +47,20 @@ add_action( 'after_setup_theme', function() {
 		'search-form'
 	] );
 }, 5 );
+
+/**
+ * Register menus.
+ *
+ * @link   https://developer.wordpress.org/reference/functions/register_nav_menus/
+ *
+ * @since  1.0.0
+ * @access public
+ * @return void
+ */
+add_action( 'init', function() {
+
+	register_nav_menus( [
+		'primary' => esc_html__( 'Primary Navigation', 'creativity' )
+	] );
+
+}, 5 );
