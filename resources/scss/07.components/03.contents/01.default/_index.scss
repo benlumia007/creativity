@@ -1,0 +1,57 @@
+@media screen and (min-width: 1170px ) {
+	.blog {
+		.content-area {
+			.grid-items {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				grid-gap: 1.125rem;
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+
+				.grid-item {
+
+					&:first-child {
+						grid-column: 1 / -1;
+					}
+
+					.post {
+						background: color( white );
+						box-shadow: 0 0.375rem 0.375rem hsl( 0deg 0% 0% / 0.3 );
+						min-height: 38rem;
+						padding: 1.125rem;
+
+						.entry-header {
+							.entry-title {
+								line-height: 2.8rem;
+								margin: 0;
+								padding: 0;
+							}
+
+							.entry-metadata {
+								font-family: font-family( date );
+								font-size: 2rem;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	$columns: 100;
+
+	@for $column from 2 through $columns {
+		.paged-#{$column} {
+			.content-area {
+				.grid-items {
+					.grid-item {
+						&:first-child {
+							grid-column: 1;
+						}
+					}
+				}
+			}
+		}
+	}
+}

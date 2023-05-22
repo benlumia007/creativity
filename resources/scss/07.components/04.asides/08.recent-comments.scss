@@ -1,0 +1,9 @@
+.widget {
+	&.widget_recent_comments {
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+	}
+}

@@ -1,0 +1,26 @@
+@media screen and ( min-width: 1170px ) {
+	.site-content {
+		margin: 1.125rem auto;
+		max-width: 1170px;
+
+		.content-area {
+			line-height: 1.8rem;
+		}
+
+		.widget-area {
+			line-height: 1.8rem;
+		}
+
+		.left-sidebar {
+			.content-area {
+				float: left;
+				width: 69.914529914529915%
+			}
+
+			.widget-area {
+				float: right;
+				width: 28.547008547008547%;
+			}
+		}
+	}
+}

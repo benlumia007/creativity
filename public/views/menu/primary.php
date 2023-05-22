@@ -2,7 +2,7 @@
 
 if ( has_nav_menu( $data->location ) ) { ?>
 	<nav id="primary" class="primary-menu">
-		<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'generosity' ); ?></button>
+		<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'creativity' ); ?></button>
 		<?php
 		wp_nav_menu(
 			array(
@@ -10,7 +10,7 @@ if ( has_nav_menu( $data->location ) ) { ?>
 				'container'      => '',
 				'menu_id'        => 'primary-menu',
 				'menu_class'     => 'menu-items',
-				'depth'          => 3
+				'depth'          => 2
 			)
 		);
 		?>

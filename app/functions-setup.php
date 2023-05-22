@@ -60,7 +60,71 @@ add_action( 'after_setup_theme', function() {
 add_action( 'init', function() {
 
 	register_nav_menus( [
-		'primary' => esc_html__( 'Primary Navigation', 'creativity' )
+		'primary'	=> esc_html__( 'Primary Navigation', 'creativity' ),
+		'secondary' => esc_html__( 'Secondary Navigation', 'creativity' )
 	] );
 
+}, 5 );
+
+/**
+ * Register image sizes. Even if adding no custom image sizes or not adding
+ * "thumbnails," it's still important to call `set_post_thumbnail_size()` so
+ * that plugins that utilize the `post-thumbnail` size will have a properly-sized
+ * thumbnail that matches the theme design.
+ *
+ * @link   https://developer.wordpress.org/reference/functions/set_post_thumbnail_size/
+ * @link   https://developer.wordpress.org/reference/functions/add_image_size/
+ * @since  1.0.0
+ * @access public
+ * @return void
+ */
+add_action( 'init', function() {
+
+	// Register custom image sizes.
+	add_image_size( 'creativity-medium', 750, 422, true );
+
+	add_image_size( 'creativity-large', 1170, 614, true );
+
+}, 5 );
+
+/**
+ * Register sidebars.
+ *
+ * @link   https://developer.wordpress.org/reference/functions/register_sidebar/
+ * @link   https://developer.wordpress.org/reference/functions/register_sidebars/
+ * @since  1.0.0
+ * @access public
+ * @return void
+ */
+add_action( 'widgets_init', function() {
+
+	$args = [
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>'
+	];
+
+	$sidebars = [
+		[
+			'id' => 'primary',
+			'name' => esc_html__( 'Primary', 'creativity' )
+		],
+		[
+			'id' => 'secondary',
+			'name' => esc_html__( 'Secondary', 'creativity' )
+		],
+		[
+			'id' => 'portfolio',
+			'name' => esc_html__( 'Portfolio', 'creativity' )
+		],
+		[
+			'id' => 'custom',
+			'name' => esc_html__( 'Custom', 'creativity' )
+		],
+	];
+
+	foreach ( $sidebars as $sidebar ) {
+		register_sidebar( array_merge( $sidebar, $args ) );
+	}
 }, 5 );

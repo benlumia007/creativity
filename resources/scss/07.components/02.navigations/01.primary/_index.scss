@@ -30,11 +30,21 @@
 					> {
 						a {
 							&:after {
-								color: color( black );
+								color: color( white );
 								content: "\f078";
 								font-family: 'Font Awesome 5 Free';
 								text-decoration: none;
 								margin-left: 0.5rem;
+							}
+						}
+					}
+
+					.sub-menu {
+						.menu-item-has-children {
+							a {
+								&:after {
+									display: none;
+								}
 							}
 						}
 					}
@@ -52,7 +62,7 @@
 					.sub-menu {
 						.menu-item {
 							a {
-								color: color( red );
+								color: color( white );
 								padding: 0.5rem 1rem;
 								text-decoration: none;
 								text-decoration-thickness: 0;
@@ -112,7 +122,5 @@
 				}
 			}
 		}
-
-
 	}
 }
