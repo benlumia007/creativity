@@ -14,8 +14,7 @@
 		<?php
 		printf(
 		// Translators: 1 = Date, 2 = Site Link.
-			esc_html__( '&#169; %1$s-%2$s. %3$s', 'creativity' ),
-			absint( '2014' ),
+			esc_html__( '&#169; %1$s. %2$s', 'creativity' ),
 			absint( date_i18n( 'Y' ) ),
 			Backdrop\Theme\Site\render_site_link()
 		);

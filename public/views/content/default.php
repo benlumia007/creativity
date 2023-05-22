@@ -10,16 +10,19 @@
  */
 ?>
 <section id="content" class="site-content">
-	<main id="main" class="content-area">
-		<?php if ( have_posts() ) : ?>
-			<div class="loop">
-				<ul class="grid-items">
-					<?php while( have_posts() ) : the_post(); ?>
-						<?php Backdrop\Template\View\display( 'content/entry' ); ?>
-					<?php endwhile; ?>
-				</ul>
-				<?php the_posts_pagination(); ?>
-			</div>
-		<?php endif; ?>
-	</main>
+	<div id="global-layout" class="<?php echo esc_attr( get_theme_mod( 'global_layout', 'left-sidebar' ) ); ?>">
+		<main id="main" class="content-area">
+			<?php if ( have_posts() ) : ?>
+				<div class="loop">
+					<ul class="grid-items">
+						<?php while( have_posts() ) : the_post(); ?>
+							<?php Backdrop\Template\View\display( 'content/entry' ); ?>
+						<?php endwhile; ?>
+					</ul>
+					<?php the_posts_pagination(); ?>
+				</div>
+			<?php endif; ?>
+		</main>
+		<?php Backdrop\Template\View\display( 'sidebar', 'primary', [ 'location' => 'primary' ] ); ?>
+	</div>
 </section>
