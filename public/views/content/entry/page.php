@@ -16,7 +16,7 @@
 	<header class="entry-header">
 		<?php Backdrop\Theme\Entry\display_title(); ?>
 	</header>
-	<div class="entry-content">
+	<div class="entry-content clear">
 		<?php the_content(); ?>
 	</div>
 </article>

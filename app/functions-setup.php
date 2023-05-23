@@ -81,6 +81,8 @@ add_action( 'init', function() {
 add_action( 'init', function() {
 
 	// Register custom image sizes.
+	add_image_size( 'creativity-small', 300, 300, true );
+
 	add_image_size( 'creativity-medium', 750, 422, true );
 
 	add_image_size( 'creativity-large', 1170, 614, true );
