@@ -28,10 +28,10 @@
 	}
 }
 
-@media screen and ( min-width: 601px ) and (max-width: 1024px ) {
+@media screen and ( min-width: 601px ) and ( max-width: 768px ) {
 	.site-content {
 		margin: 1.125rem;
-		max-width: 1170px;
+		max-width: 768px;
 
 		.content-area {
 			line-height: 1.8rem;
@@ -39,6 +39,33 @@
 
 		.widget-area {
 			line-height: 1.8rem;
+		}
+	}
+}
+
+@media screen and ( min-width: 769px ) and (max-width: 1024px ) {
+	.site-content {
+		margin: 1.125rem;
+		max-width: 1024px;
+
+		.content-area {
+			line-height: 1.8rem;
+		}
+
+		.widget-area {
+			line-height: 1.8rem;
+		}
+
+		.left-sidebar {
+			.content-area {
+				float: left;
+				width: 70.1171875%
+			}
+
+			.widget-area {
+				float: right;
+				width: 28.125%;
+			}
 		}
 	}
 }
