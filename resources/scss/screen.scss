@@ -15,7 +15,7 @@
 //
 // Settings handle the configuration and variables.
 
-@import '01.settings/index';
+@import '01.settings/__index';
 
 // -----------------------------------------------------------------------------
 // Import tools.
@@ -24,7 +24,7 @@
 // These are used throughout the code but don't output CSS on their own. Things
 // like functions, mixins, and extensions go here.
 
-@import '02.tools/index';
+@import '02.tools/__index';
 
 // -----------------------------------------------------------------------------
 // Import generic styles.
@@ -34,7 +34,7 @@
 // fonts, etc. are best handled here. These are the base styles that other
 // styles will build upon.
 
-@import '03.generics/index';
+@import '03.generics/__index';
 
 // -----------------------------------------------------------------------------
 // Import element styles.
@@ -44,7 +44,7 @@
 // The styles in this folder should only handle the defaults. More specific
 // styles should be handled later in the cascade.
 
-@import '04.elements/index';
+@import '04.elements/__index';
 
 // -----------------------------------------------------------------------------
 // Import object styles.
@@ -80,4 +80,4 @@
 // necessary, this is the only place where `!important` rules should go, but
 // only if necessary.
 
-@import '08.utilities/index';
+@import '08.utilities/__index';

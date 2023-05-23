@@ -1,4 +1,49 @@
-@media screen and ( min-width: 1170px ) {
+@media screen and ( max-width: 480px ) {
+	.site-content {
+		margin: 1.125rem;
+		max-width: 1170px;
+
+		.content-area {
+			line-height: 1.8rem;
+		}
+
+		.widget-area {
+			line-height: 1.8rem;
+		}
+	}
+}
+
+@media screen and ( min-width: 481px ) and (max-width: 600px ) {
+	.site-content {
+		margin: 1.125rem;
+		max-width: 1170px;
+
+		.content-area {
+			line-height: 1.8rem;
+		}
+
+		.widget-area {
+			line-height: 1.8rem;
+		}
+	}
+}
+
+@media screen and ( min-width: 601px ) and (max-width: 1024px ) {
+	.site-content {
+		margin: 1.125rem;
+		max-width: 1170px;
+
+		.content-area {
+			line-height: 1.8rem;
+		}
+
+		.widget-area {
+			line-height: 1.8rem;
+		}
+	}
+}
+
+@media screen and ( min-width: 1025px ) {
 	.site-content {
 		margin: 1.125rem auto;
 		max-width: 1170px;
@@ -14,12 +59,12 @@
 		.left-sidebar {
 			.content-area {
 				float: left;
-				width: 69.914529914529915%
+				width: 72.307692307692308%
 			}
 
 			.widget-area {
 				float: right;
-				width: 28.547008547008547%;
+				width: 26.153846153846154%;
 			}
 		}
 	}

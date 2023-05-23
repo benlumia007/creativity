@@ -21,3 +21,8 @@
 		text-decoration: none;
 	}
 }
+
+// Targets the "skip to content" link at the top of the page if it needs extra
+// style rules beyond the screen reader text rules.
+
+.skip-link {}
