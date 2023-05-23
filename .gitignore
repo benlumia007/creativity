@@ -3,6 +3,7 @@ node_modules
 public/assets
 vendor
 
+.DS_Store
 public/mix-manifest.json
 composer.lock
 package-lock.json
