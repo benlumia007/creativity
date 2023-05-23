@@ -53,7 +53,7 @@ $creativity->provider( Backdrop\Theme\Provider::class );
  * application instance as a parameter.
  */
 
-do_action( 'creativity/bootstrap', $creativity );
+// do_action( 'creativity/bootstrap', $creativity );
 
 /** ------------------------------------------------------------------------------------------
  * Boot the application.
