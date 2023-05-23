@@ -14,7 +14,7 @@
 		<h1 class="entry-title"><?php esc_html_e( 'Not Found', 'creativity' ); ?></h1>
 	</header>
 	<div class="entry-content">
-		<p><?php esc_html_e( 'It looks like you stumbled upon a page that does not exist. Perhaps rolling the dice with a search might help.' ) ?></p>
+		<p><?php esc_html_e( 'It looks like you stumbled upon a page that does not exist. Perhaps rolling the dice with a search might help.', 'creativity' ) ?></p>
 
 		<?php get_search_form() ?>
 	</div>
