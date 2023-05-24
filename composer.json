@@ -30,8 +30,8 @@
 		"benlumia007/backdrop-theme": "^1.0"
 	},
 	"require-dev": {
-		"dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
-		"wptrt/wpthemereview": "^0.2.1",
+		"dealerdirect/phpcodesniffer-composer-installer": "*",
+		"wptrt/wpthemereview": "*",
 		"php-parallel-lint/php-parallel-lint": "^1.2.0"
 	},
 	"scripts": {
