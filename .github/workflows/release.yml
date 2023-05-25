@@ -20,7 +20,7 @@ jobs:
                   ssh-key: ${{ secrets.PRIVATE_KEY }}
 
             - name: step three
-              run: composer install no-dev
+              run: composer install -- no-dev
 
             - name: step four
               run: npm install
