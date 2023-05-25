@@ -26,7 +26,7 @@ const UPDATE_SERVER = 'https://updates.luthemes.com';
 
 // EDIT: Choose what to do in ClassicPress v.2 and above.
 //       Set to true to disable UpdateClient if updates are provided
-//       using the Classicpress Plugin Directory.
+//       using the ClassicPress Plugin Directory.
 const USE_DIRECTORY = false;
 
 // EDIT: Comment this out and fill with the first part of the url

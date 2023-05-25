@@ -44,6 +44,8 @@ $creativity->provider( Backdrop\Theme\Provider::class );
  * the application. These service providers offer supplementary features to the theme.
  */
 
+$creativity->provider( Creativity\Customize\Home\Provider::class );
+
 /** ------------------------------------------------------------------------------------------
  * Perform any actions.
  * -------------------------------------------------------------------------------------------
