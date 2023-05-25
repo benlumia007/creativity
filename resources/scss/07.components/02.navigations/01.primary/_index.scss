@@ -1,3 +1,104 @@
+@media screen and ( max-width: 768px ) {
+	.menu-toggle {
+		background: color( black );
+		border: none;
+		bottom: 1.125rem;
+		color: color( white );
+		font-family: font-family( primary );
+		left: 1.125rem;
+		padding: 0.5rem 1rem;
+		position: fixed;
+	}
+
+	.menu-items {
+		left: -9999rem;
+		position: absolute;
+	}
+
+	.toggled {
+		.menu-items {
+			background: color( black );
+			display: block;
+			bottom: 3.5rem;
+			left: 1.25rem;
+			margin: 0;
+			padding: 0;
+			position: fixed;
+			right: 1.125rem;
+			text-align: left;
+
+			.menu-item {
+				list-style-type: none;
+				margin: 0.6rem;
+				padding: 0.6rem;
+
+				a {
+					color: color( white );
+					text-decoration: none;
+				}
+
+				.dropdown-toggle {
+					background: transparent;
+					border: none;
+					margin: 0;
+					padding: 0;
+					position: absolute;
+					right: 1.250rem;
+
+					.fontawesome {
+						border: 0.063rem solid color( white );
+						color: color( white );
+						font-family: 'Font Awesome 5 Free';
+						font-size: 1.125rem;
+						padding: 0.4rem;
+
+						&:before {
+							content: "\f078";
+						}
+					}
+				}
+
+				.sub-menu {
+					left: -9999rem;
+					list-style-type: none;
+					margin: 0;
+					padding: 0;
+					position: absolute;
+				}
+
+				&.toggled-on {
+					.dropdown-toggle {
+						background: transparent;
+						border: none;
+						margin: 0;
+						padding: 0;
+						position: absolute;
+						right: 1.250rem;
+
+						.fontawesome {
+							color: color( white );
+							font-family: 'Font Awesome 5 Free';
+							font-size: 1.25rem;
+
+							&:before {
+								content: "\f077";
+							}
+						}
+					}
+
+					.sub-menu {
+						background: transparent;
+						left: 0;
+						right: 0;
+						padding-left: 0;
+						position: relative;
+					}
+				}
+			}
+		}
+	}
+}
+
 @media screen and ( min-width: 769px ) {
 	.primary-menu {
 		padding: 0.6rem;
