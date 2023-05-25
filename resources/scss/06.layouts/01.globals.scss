@@ -96,3 +96,30 @@
 		}
 	}
 }
+
+@media screen and ( min-width: 1170px ) {
+	.site-content {
+		margin: 1.125rem auto;
+		max-width: 1170px;
+
+		.content-area {
+			line-height: 1.8rem;
+		}
+
+		.widget-area {
+			line-height: 1.8rem;
+		}
+
+		.left-sidebar {
+			.content-area {
+				float: left;
+				width: 73.846153846153846%
+			}
+
+			.widget-area {
+				float: right;
+				width: 24.615384615384615%;
+			}
+		}
+	}
+}
