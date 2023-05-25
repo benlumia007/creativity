@@ -88,7 +88,7 @@ class Component implements Customize {
 			]
 		) );
 
-		$manager->add_control( new \WP_Customize_Image_Control (
+		$manager->add_control( new \WP_Customize_Image_Control(
 			$manager, 'custom_avatar', array(
 				'label' => esc_html__( 'Avatar Image', 'creativity' ),
 				'description' => esc_html__( 'Please set avatar image to 250 by 250 to fit properly', 'creativity' ),

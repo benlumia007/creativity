@@ -27,12 +27,7 @@
 					while ( $query->have_posts() ) : $query->the_post();
 						if ( has_post_thumbnail() ) {
 							?>
-							<?php
-							$words = strtolower( wptexturize( wp_strip_all_tags( get_post( get_post_thumbnail_id() )->post_content ) ) );
-							$type = explode( " ", $words );
-							array_splice( $type, -1 );
-							?>
-							<li class="portfolio-item <?php echo implode( " ", $type );  ?>">
+							<li class="portfolio-item">
 								<a href="<?php echo esc_url( get_permalink() ); ?>">
 									<?php the_post_thumbnail( 'camaraderie-large-thumbnails' ); ?>
 								</a>
