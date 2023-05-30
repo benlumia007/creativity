@@ -1,20 +1,24 @@
 <?php
 /**
- * Default custom home template
+ * Default content/default template
  *
  * @package   Creativity
  * @author    Benjamin Lu <benlumia007@gmail.com>
- * @copyright 2014-2023. Benjamin Lu
+ * @copyright 2023. Benjamin Lu
  * @license   https://www.gnu.org/licenses/gpl-2.0.html
  * @link      https://luthemes.com/portfolio/creativity
  */
-$portfolio_display = get_theme_mod( 'portfolio_display' );
-$blog_display      = get_theme_mod( 'blog_display' );
-
-if ( 0 != $portfolio_display && isset( $portfolio_display ) ) {
-	Backdrop\Template\View\display( 'content/section/portfolio' );
-}
-
-if ( 0 != $blog_display && isset( $blog_display ) ) {
-	Backdrop\Template\View\display( 'section/blog' );
-}
+?>
+<section id="content" class="site-content clear">
+	<div id="global-layout" class="<?php echo esc_attr( get_theme_mod( 'global_layout', 'left-sidebar' ) ); ?>">
+		<main id="main" class="content-area">
+			<?php if ( have_posts() ) : ?>
+				<?php while( have_posts() ) : the_post(); ?>
+					<?php Backdrop\Template\View\display( 'content/entry/page' ); ?>
+				<?php endwhile; ?>
+				<?php comments_template(); ?>
+			<?php endif; ?>
+		</main>
+		<?php Backdrop\Template\View\display( 'sidebar','custom', [ 'location' => 'custom' ] ); ?>
+	</div>
+</section>
