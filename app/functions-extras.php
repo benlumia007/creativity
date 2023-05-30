@@ -31,10 +31,13 @@ add_filter( 'backdrop/template/path', function() {
  */
 add_action( 'backdrop/templates/register', function( $templates ) {
 
-	if ( class_exists( BSP\Portfolio\Provider::class ) ) {
-		$templates->add( 'template-home.php', [
-			'label' => esc_html__( 'Home', 'creativity' )
-		] );
+	if ( function_exists( 'is_plugin_active' ) ) {
+		if ( is_plugin_active( 'backdrop-custom-portfolio/backdrop-custom-portfolio.php' ) ) {
+			$templates->add( 'template-home.php', [
+				'label' => esc_html__( 'Home', 'creativity' ),
+				'post_types' => 'page',
+			] );
+		}
 	}
 
 	$templates->add( 'template-left-sidebar.php', [
