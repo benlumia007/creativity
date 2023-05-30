@@ -1,4 +1,4 @@
-<?php
+template-home.php<?php
 /**
  * Default custom home template
  *

@@ -31,7 +31,21 @@ add_filter( 'backdrop/template/path', function() {
  */
 add_action( 'backdrop/templates/register', function( $templates ) {
 
-	$templates->add( 'template-home.php', [
-		'label' => esc_html__( 'Home', 'creativity' )
+	if ( class_exists( BSP\Portfolio\Provider::class ) ) {
+		$templates->add( 'template-home.php', [
+			'label' => esc_html__( 'Home', 'creativity' )
+		] );
+	}
+
+	$templates->add( 'template-left-sidebar.php', [
+		'label' => esc_html__( 'Left Sidebar', 'creativity' )
+	] );
+
+	$templates->add( 'template-right-sidebar.php', [
+		'label' => esc_html__( 'Right Sidebar', 'creativity' )
+	] );
+
+	$templates->add( 'template-custom-sidebar.php', [
+		'label' => esc_html__( 'Custom Sidebar', 'creativity' )
 	] );
 } );

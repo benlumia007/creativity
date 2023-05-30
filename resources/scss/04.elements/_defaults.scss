@@ -4,3 +4,14 @@ body {
 	font-size: $text-base;
 	margin: 0;
 }
+
+pre {
+	background: #eeeeee;
+	border: 0.063rem solid #cccccc;
+	padding: 1.125rem;
+}
+
+code {
+	background: #eeeeee;
+	padding: 0 3px;
+}

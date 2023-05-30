@@ -32,12 +32,6 @@ class Component implements Customize {
 
 	public function sections( WP_Customize_Manager $manager ) {
 
-		$manager->add_section( 'header_section', array(
-			'title'    => esc_html__( 'Header Section', 'creativity' ),
-			'panel'    => 'home_panel',
-			'priority' => 5,
-		) );
-
 		$manager->add_section( 'custom_portfolio', array(
 			'title' => esc_html__( 'Portfolio Section', 'creativity' ),
 			'panel' => 'home_panel',
@@ -79,24 +73,6 @@ class Component implements Customize {
 	}
 
 	public function controls( WP_Customize_Manager $manager ) {
-		$manager->add_control( new \WP_Customize_Image_Control(
-			$manager, 'custom_image', [
-				'label' => esc_html__( 'Background Image', 'creativity' ),
-				'description' => esc_html__( 'Please set background image to 2000 by 1200 to fit properly', 'creativity' ),
-				'section' => 'header_section',
-				'settings' => 'custom_image',
-			]
-		) );
-
-		$manager->add_control( new \WP_Customize_Image_Control(
-			$manager, 'custom_avatar', array(
-				'label' => esc_html__( 'Avatar Image', 'creativity' ),
-				'description' => esc_html__( 'Please set avatar image to 250 by 250 to fit properly', 'creativity' ),
-				'section' => 'header_section',
-				'settings' => 'custom_avatar',
-			)
-		) );
-
 		$displays = [
 			'portfolio_display' => [
 				'label' => esc_html__( 'Enable Portfolio', 'creativity' ),

@@ -1,4 +1,6 @@
-.site-content {
+.site-content,
+.content-area,
+.entry-content {
 	&:before,
 	&:after {
 		clear: both;
