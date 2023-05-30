@@ -10,13 +10,11 @@
  */
 $portfolio_display = get_theme_mod( 'portfolio_display' );
 $blog_display      = get_theme_mod( 'blog_display' );
-?>
-<?php if ( class_exists( BSP\Portfolio\Provider::class ) ) : ?>
-	<?php if ( 0 != $portfolio_display && isset( $portfolio_display ) ) : ?>
-		<?php Backdrop\Template\View\display( 'content/section/portfolio' ); ?>
-	<?php endif ?>
-	<?php if ( 0 != $blog_display && isset( $blog_display ) ) { ?>
-		<?php Backdrop\Template\View\display( 'section/blog' ); ?>
-	<?php } ?>
 
-<?php  endif; ?>
+if ( 0 != $portfolio_display && isset( $portfolio_display ) ) {
+Backdrop\Template\View\display( 'content/section/portfolio' );
+}
+
+if ( 0 != $blog_display && isset( $blog_display ) ) {
+Backdrop\Template\View\display( 'section/blog' );
+}
