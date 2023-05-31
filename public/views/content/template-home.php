@@ -21,5 +21,5 @@ Backdrop\Template\View\display( 'content/section/portfolio' );
 }
 
 if ( 0 != $blog_display && isset( $blog_display ) ) {
-Backdrop\Template\View\display( 'section/blog' );
+Backdrop\Template\View\display( 'content/section/blog' );
 }
