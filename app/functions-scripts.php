@@ -54,8 +54,9 @@ add_action('wp_enqueue_scripts', function() {
 				background: url({$custom_image});
 				background-size: cover !important;
 				box-sizing: border-box;
-				padding: 7rem 0;
+				padding: 8rem 0;
 			}
+
 			.header-image .header-image-title {
 				color: #ffffff;
 				font-size: 3rem;
