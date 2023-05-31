@@ -11,8 +11,8 @@
 <section id="portfolio" class="section-portfolio">
 	<div class="content-area">
 		<header class="portfolio-header">
-			<h1 class="portfolio-title"><?php esc_html_e( 'Portfolio', 'creativity' ); ?></h1>
-			<span class="portfolio-description"><?php esc_html_e( 'Some of my recent works', 'creativity' ); ?></span>
+			<h1 class="portfolio-title"><?php echo esc_html( get_theme_mod( 'custom_portfolio_title', 'Portfolio' ) ); ?></h1>
+			<span class="portfolio-description"><?php echo esc_html( get_theme_mod( 'custom_portfolio_description', 'Some of my recent works!') ); ?></span>
 		</header>
 			<div class="portfolio-content">
 			<ul class="portfolio-items">

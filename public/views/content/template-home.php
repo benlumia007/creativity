@@ -8,8 +8,13 @@
  * @license   https://www.gnu.org/licenses/gpl-2.0.html
  * @link      https://luthemes.com/portfolio/creativity
  */
+$home_display = get_theme_mod( 'home_display' );
 $portfolio_display = get_theme_mod( 'portfolio_display' );
 $blog_display      = get_theme_mod( 'blog_display' );
+
+if ( 0 != $home_display && isset( $home_display ) ) {
+	Backdrop\Template\View\display( 'content/section/header' );
+}
 
 if ( 0 != $portfolio_display && isset( $portfolio_display ) ) {
 Backdrop\Template\View\display( 'content/section/portfolio' );

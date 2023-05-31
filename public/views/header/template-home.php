@@ -30,6 +30,3 @@
 			<?php Backdrop\Template\View\display( 'menu', 'primary', [ 'location' => 'primary'] ); ?>
 		</div>
 	</header>
-	<div class="header-image">
-		<h1 class="header-image-title"><?php the_title() ?></h1>
-	</div>

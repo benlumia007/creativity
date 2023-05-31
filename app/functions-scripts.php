@@ -43,3 +43,34 @@ add_action( 'wp_enqueue_scripts', function() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 } );
+
+add_action('wp_enqueue_scripts', function() {
+
+	$custom_image = esc_url( get_theme_mod( 'custom_image', get_theme_file_uri( '/public/images/header-image.jpg' ) ) );
+	$avatar_image = esc_url( get_theme_mod( 'custom_avatar', get_theme_file_uri( '/public/images/avatar.jpg' ) ) );
+
+	$custom_css = "
+			.header-image {
+				background: url({$custom_image});
+				background-size: cover !important;
+				box-sizing: border-box;
+				padding: 7rem 0;
+			}
+			.header-image .header-image-title {
+				color: #ffffff;
+				font-size: 3rem;
+				margin: 0;
+				padding: 0;
+				text-align: center;
+			}
+			.header-image .header-description {
+				line-height: 1.8rem;
+				color: #ffffff;
+				margin: 0 auto;
+				max-width: 768px;
+				text-align: center;
+			}
+		";
+	wp_add_inline_style( 'creativity-screen', $custom_css );
+}
+);
