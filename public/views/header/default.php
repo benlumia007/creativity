@@ -39,6 +39,8 @@
 				</div>
 			<?php } ?>
 		<?php } else if ( is_singular() ) { ?>
-			<h1 class="header-image-title"><?php the_title() ?></h1>
-		<?php }  ?>
+			<h1 class="header-image-title"><?php the_title(); ?></h1>
+		<?php } elseif ( is_home() ) { ?>
+			<h1 class="header-image-title"><?php esc_html_e( 'Blog', 'creativity' ); ?></h1>
+		<?php } ?>
 	</div>
