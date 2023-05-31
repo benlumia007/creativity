@@ -27,7 +27,7 @@
 		"benlumia007/backdrop-template-hierarchy": "^1.0",
 		"benlumia007/backdrop-template-manager": "^1.0",
 		"benlumia007/backdrop-template-view": "^1.0",
-		"benlumia007/backdrop-theme": "^1.0"
+		"benlumia007/backdrop-theme": "v1.0.0.x-dev"
 	},
 	"require-dev": {
 		"dealerdirect/phpcodesniffer-composer-installer": "*",

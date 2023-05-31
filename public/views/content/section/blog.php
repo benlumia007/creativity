@@ -20,7 +20,7 @@
 				$posts_per_page = get_theme_mod( 'custom_portfolio_items', 9 );
 				$query          = new WP_Query( array(
 					'post_type'      => 'post',
-					'posts_per_page' => 3,
+					'posts_per_page' => 2,
 				) );
 
 				if ( $query->have_posts() ) :
@@ -31,9 +31,12 @@
 								<a href="<?php echo esc_url( get_permalink() ); ?>">
 									<?php the_post_thumbnail( 'creativity-large' ); ?>
 								</a>
-								<div class="wp-caption">
-									<h2 class="wp-caption-text"><a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_post_thumbnail_caption(); ?></a></h2>
-									<span><?php echo wptexturize( wp_strip_all_tags( get_post( get_post_thumbnail_id() )->post_content ) ); // phpcs:ignore ?></span>
+								<header class="entry-header">
+									<?php Backdrop\Theme\Entry\display_title(); ?>
+									<span class="entry-metadata"><?php Backdrop\Theme\Entry\display_date(); ?></span>
+								</header>
+								<div class="entry-excerpt">
+									<?php the_excerpt(); ?>
 								</div>
 							</li>
 							<?php

@@ -31,5 +31,14 @@
 		</div>
 	</header>
 	<div class="header-image">
-		<h1 class="header-image-title"><?php the_title() ?></h1>
+		<?php if ( is_archive() ) { ?>
+			<h1 class="header-image-title"><?php the_archive_title(); ?></h1>
+			<?php if ( ! is_paged() && get_the_archive_description() ) { ?>
+				<div class="header-image-description">
+					<?php the_archive_description(); ?>
+				</div>
+			<?php } ?>
+		<?php } else if ( is_singular() ) { ?>
+			<h1 class="header-image-title"><?php the_title() ?></h1>
+		<?php }  ?>
 	</div>
