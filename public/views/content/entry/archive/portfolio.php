@@ -10,9 +10,6 @@
  */
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<h1 class="entry-title"><?php esc_html_e( 'Portfolio', 'camaraderie' ); ?></h1>
-	</header>
 	<div class="entry-content">
 		<ul class="portfolio-items">
 			<?php while (have_posts()) : the_post(); ?>
