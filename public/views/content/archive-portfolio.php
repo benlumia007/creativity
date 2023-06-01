@@ -12,12 +12,7 @@
 <section id="content" class="site-content">
 	<main id="main" class="content-area">
 		<?php if ( have_posts() ) : ?>
-			<div class="loop">
-				<ul class="grid-items grid-col-3">
-					<?php Backdrop\Template\View\display( 'content/entry/archive/portfolio' ); ?>
-				</ul>
-				<?php the_posts_pagination(); ?>
-			</div>
+			<?php Backdrop\Template\View\display( 'content/entry/archive/portfolio' ); ?>
 		<?php endif; ?>
 	</main>
 </section>

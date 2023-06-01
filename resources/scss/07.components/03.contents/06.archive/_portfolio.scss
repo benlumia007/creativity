@@ -1,0 +1,171 @@
+@media screen  and ( max-width: 768px ) {
+	.archive-portfolio {
+
+		.content-area {
+			background: color( white );
+			padding: 1.125rem;
+
+			.entry-header {
+				text-align: center;
+
+				.entry-title {
+					margin: 0;
+					padding: 1.125rem;
+				}
+			}
+
+
+			.portfolio-items {
+				display: grid;
+				grid-template-columns: 1fr;
+				grid-gap: 1.125rem;
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+
+				.portfolio-item {
+
+					.wp-caption {
+						background: #eeeeee;
+						padding: 1.125rem;
+						text-align: center;
+
+						&-text {
+							margin: 0;
+							padding: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen  and ( min-width: 769px ) and ( max-width: 1024px ) {
+	.archive-portfolio {
+
+		.content-area {
+			background: color( white );
+			padding: 1.125rem;
+
+			.entry-header {
+				text-align: center;
+
+				.entry-title {
+					margin: 0;
+					padding: 1.125rem;
+				}
+			}
+
+
+			.portfolio-items {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				grid-gap: 1.125rem;
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+
+				.portfolio-item {
+
+					.wp-caption {
+						background: #eeeeee;
+						padding: 1.125rem;
+						text-align: center;
+
+						&-text {
+							margin: 0;
+							padding: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen  and ( min-width: 1025px ) and ( max-width: 1170px ) {
+	.archive-portfolio {
+
+		.content-area {
+			background: color( white );
+			padding: 1.125rem;
+
+			.entry-header {
+				text-align: center;
+
+				.entry-title {
+					margin: 0;
+					padding: 1.125rem;
+				}
+			}
+
+
+			.portfolio-items {
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
+				grid-gap: 1.125rem;
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+
+				.portfolio-item {
+
+					.wp-caption {
+						background: #eeeeee;
+						padding: 1.125rem;
+						text-align: center;
+
+						&-text {
+							margin: 0;
+							padding: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen  and ( min-width: 1171px ) {
+	.archive-portfolio {
+
+		.content-area {
+			background: color( white );
+			padding: 1.125rem;
+
+			.entry-header {
+				text-align: center;
+
+				.entry-title {
+					margin: 0;
+					padding: 1.125rem;
+				}
+			}
+
+
+			.portfolio-items {
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
+				grid-gap: 1.125rem;
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+
+				.portfolio-item {
+
+					.wp-caption {
+						background: #eeeeee;
+						padding: 1.125rem;
+						text-align: center;
+
+						&-text {
+							margin: 0;
+							padding: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
