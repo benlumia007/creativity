@@ -1,73 +1,304 @@
-.section-blog {
-	.content-area {
-		margin: 0 auto;
-		max-width: 1170px;
-		padding: 1.125rem;
+@media screen and ( max-width: 768px ) {
+	.section-blog {
+		.content-area {
+			margin: 0 auto;
+			max-width: 768px;
+			padding: 1.125rem;
 
-		.blog-header {
-			text-align: center;
+			.blog-header {
+				text-align: center;
 
-			.blog-title {
-				margin: 0;
-				padding: 0;
+				.blog-title {
+					margin: 0;
+					padding: 0;
+				}
 			}
-		}
 
-		.portfolio-tabs {
-			text-align: center;
+			.portfolio-tabs {
+				text-align: center;
 
-			.data-items {
-				.data-item {
+				.data-items {
+					.data-item {
 
-					&.active {
-						text-decoration: underline;
-						text-decoration-thickness: 2px;
-						text-underline-offset: 3px;
+						&.active {
+							text-decoration: underline;
+							text-decoration-thickness: 2px;
+							text-underline-offset: 3px;
+						}
 					}
 				}
 			}
-		}
 
-		.blog-content {
-			margin-top: 1.125rem;
+			.blog-content {
+				margin-top: 1.125rem;
 
-			.blog-items {
-				display: grid;
-				list-style-type: none;
-				grid-template-columns: 1fr 1fr;
-				grid-gap: 1.125rem;
-				margin: 0;
-				padding: 0;
+				.blog-items {
+					display: grid;
+					list-style-type: none;
+					grid-template-columns: 1fr;
+					grid-gap: 1.125rem;
+					margin: 0;
+					padding: 0;
 
-				.blog-item {
-					background: color( white );
-					box-shadow: 0 0.375rem 0.375rem hsl( 0deg 0% 0% / 0.3 );
-					padding: 1.125rem;
-					line-height: 1.8rem;
+					.blog-item {
+						background: color( white );
+						box-shadow: 0 0.375rem 0.375rem hsl( 0deg 0% 0% / 0.3 );
+						padding: 1.125rem;
+						line-height: 1.8rem;
 
-					.entry-header {
+						.entry-header {
 
-						.entry-title {
-							margin: 0;
-							padding: 0;
+							.entry-title {
+								margin: 0;
+								padding: 0;
+							}
+
+							.entry-metadata {
+								font-family: font-family( date );
+								font-size: 1.7rem;
+							}
 						}
 
-						.entry-metadata {
-							font-family: font-family( date );
-							font-size: 1.7rem;
-						}
-					}
+						.wp-caption {
+							text-align: center;
 
-					.wp-caption {
-						text-align: center;
-
-						&-text {
-							margin: 0;
-							padding: 0;
+							&-text {
+								margin: 0;
+								padding: 0;
+							}
 						}
 					}
 				}
 			}
 		}
 	}
+}
+
+@media screen and ( min-width: 769px ) and ( max-width: 1024px ) {
+	.section-blog {
+		.content-area {
+			margin: 0 auto;
+			max-width: 1024px;
+			padding: 1.125rem;
+
+			.blog-header {
+				text-align: center;
+
+				.blog-title {
+					margin: 0;
+					padding: 0;
+				}
+			}
+
+			.portfolio-tabs {
+				text-align: center;
+
+				.data-items {
+					.data-item {
+
+						&.active {
+							text-decoration: underline;
+							text-decoration-thickness: 2px;
+							text-underline-offset: 3px;
+						}
+					}
+				}
+			}
+
+			.blog-content {
+				margin-top: 1.125rem;
+
+				.blog-items {
+					display: grid;
+					list-style-type: none;
+					grid-template-columns: 1fr 1fr;
+					grid-gap: 1.125rem;
+					margin: 0;
+					padding: 0;
+
+					.blog-item {
+						background: color( white );
+						box-shadow: 0 0.375rem 0.375rem hsl( 0deg 0% 0% / 0.3 );
+						padding: 1.125rem;
+						line-height: 1.8rem;
+
+						.entry-header {
+
+							.entry-title {
+								margin: 0;
+								padding: 0;
+							}
+
+							.entry-metadata {
+								font-family: font-family( date );
+								font-size: 1.7rem;
+							}
+						}
+
+						.wp-caption {
+							text-align: center;
+
+							&-text {
+								margin: 0;
+								padding: 0;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and ( min-width: 1025px ) and ( max-width: 1170px ) {
+	.section-blog {
+		.content-area {
+			margin: 0 auto;
+			max-width: 1024px;
+			padding: 1.125rem;
+
+			.blog-header {
+				text-align: center;
+
+				.blog-title {
+					margin: 0;
+					padding: 0;
+				}
+			}
+
+			.portfolio-tabs {
+				text-align: center;
+
+				.data-items {
+					.data-item {
+
+						&.active {
+							text-decoration: underline;
+							text-decoration-thickness: 2px;
+							text-underline-offset: 3px;
+						}
+					}
+				}
+			}
+
+			.blog-content {
+				margin-top: 1.125rem;
+
+				.blog-items {
+					display: grid;
+					list-style-type: none;
+					grid-template-columns: 1fr 1fr;
+					grid-gap: 1.125rem;
+					margin: 0;
+					padding: 0;
+
+					.blog-item {
+						background: color( white );
+						box-shadow: 0 0.375rem 0.375rem hsl( 0deg 0% 0% / 0.3 );
+						padding: 1.125rem;
+						line-height: 1.8rem;
+
+						.entry-header {
+
+							.entry-title {
+								margin: 0;
+								padding: 0;
+							}
+
+							.entry-metadata {
+								font-family: font-family( date );
+								font-size: 1.7rem;
+							}
+						}
+
+						.wp-caption {
+							text-align: center;
+
+							&-text {
+								margin: 0;
+								padding: 0;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and ( min-width: 1171px ) {
+	.section-blog {
+		.content-area {
+			margin: 0 auto;
+			max-width: 1170px;
+			padding: 1.125rem;
+
+			.blog-header {
+				text-align: center;
+
+				.blog-title {
+					margin: 0;
+					padding: 0;
+				}
+			}
+
+			.portfolio-tabs {
+				text-align: center;
+
+				.data-items {
+					.data-item {
+
+						&.active {
+							text-decoration: underline;
+							text-decoration-thickness: 2px;
+							text-underline-offset: 3px;
+						}
+					}
+				}
+			}
+
+			.blog-content {
+				margin-top: 1.125rem;
+
+				.blog-items {
+					display: grid;
+					list-style-type: none;
+					grid-template-columns: 1fr 1fr;
+					grid-gap: 1.125rem;
+					margin: 0;
+					padding: 0;
+
+					.blog-item {
+						background: color( white );
+						box-shadow: 0 0.375rem 0.375rem hsl( 0deg 0% 0% / 0.3 );
+						padding: 1.125rem;
+						line-height: 1.8rem;
+
+						.entry-header {
+
+							.entry-title {
+								margin: 0;
+								padding: 0;
+							}
+
+							.entry-metadata {
+								font-family: font-family( date );
+								font-size: 1.7rem;
+							}
+						}
+
+						.wp-caption {
+							text-align: center;
+
+							&-text {
+								margin: 0;
+								padding: 0;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
 }
