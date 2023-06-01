@@ -39,7 +39,12 @@
 				</div>
 			<?php } ?>
 		<?php } else if ( is_singular() ) { ?>
-			<h1 class="header-image-title"><?php the_title(); ?></h1>
+				<?php if ( empty( get_the_title() ) ) { ?>
+				<h1 class="header-image-title"><?php esc_html_e( '(Untitled)', 'creativity' ); ?></h1>
+			<?php } else { ?>
+				<h1 class="header-image-title"><?php the_title(); ?></h1>
+			<?php }
+			?>
 		<?php } elseif ( is_home() ) { ?>
 			<h1 class="header-image-title"><?php esc_html_e( 'Blog', 'creativity' ); ?></h1>
 		<?php } ?>
