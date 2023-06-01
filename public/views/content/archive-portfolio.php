@@ -14,9 +14,7 @@
 		<?php if ( have_posts() ) : ?>
 			<div class="loop">
 				<ul class="grid-items grid-col-3">
-					<?php while( have_posts() ) : the_post(); ?>
-						<?php Backdrop\Template\View\display( 'content/entry/portfolio' ); ?>
-					<?php endwhile; ?>
+					<?php Backdrop\Template\View\display( 'content/entry/archive/portfolio' ); ?>
 				</ul>
 				<?php the_posts_pagination(); ?>
 			</div>
