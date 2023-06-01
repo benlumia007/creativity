@@ -52,6 +52,8 @@ if ( function_exists( 'is_plugin_active' ) ) {
 	}
 }
 
+$creativity->provider( Creativity\Customize\Layouts\Provider::class );
+
 /** ------------------------------------------------------------------------------------------
  * Perform any actions.
  * -------------------------------------------------------------------------------------------

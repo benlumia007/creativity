@@ -9,7 +9,7 @@
  * @link      https://luthemes.com/portfolio/creativity
  */
 ?>
-<!doctype html>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />

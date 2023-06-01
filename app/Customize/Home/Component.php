@@ -16,17 +16,17 @@ use WP_Customize_Manager;
 class Component implements Customize {
 
 	public function boot() {
-		add_action( 'customize_register', [ $this, 'panels' ] );
-		add_action( 'customize_register', [ $this, 'sections' ] );
-		add_action( 'customize_register', [ $this, 'settings' ] );
-		add_action( 'customize_register', [ $this, 'controls' ] );
+		add_action( 'customize_register', [ $this, 'panels' ], 0 );
+		add_action( 'customize_register', [ $this, 'sections' ], 0 );
+		add_action( 'customize_register', [ $this, 'settings' ], 0 );
+		add_action( 'customize_register', [ $this, 'controls' ], 0 );
 	}
 
 	public function panels( WP_Customize_Manager $manager ) {
 
 		$manager->add_panel( 'home_panel', [
 			'title'    => esc_html__( 'Home Section', 'creativity' ),
-			'priority' => 15,
+			'priority' => 5,
 		] );
 	}
 
