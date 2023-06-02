@@ -19,15 +19,15 @@
 	},
 	"require": {
 		"php": ">=7.0",
-		"benlumia007/backdrop": "^2.0",
-    	"benlumia007/backdrop-customize": "v1.0.0.x-dev",
+		"benlumia007/backdrop": "^1.0",
+		"benlumia007/backdrop-customize": "^1.0",
 		"benlumia007/backdrop-fontawesome": "^1.0",
 		"benlumia007/backdrop-fonts": "^1.0",
-		"benlumia007/backdrop-mix-manifest": "v1.0.0.x-dev",
+		"benlumia007/backdrop-mix-manifest": "^1.0",
 		"benlumia007/backdrop-template-hierarchy": "^1.0",
 		"benlumia007/backdrop-template-manager": "^1.0",
 		"benlumia007/backdrop-template-view": "^1.0",
-		"benlumia007/backdrop-theme": "v1.0.0.x-dev"
+		"benlumia007/backdrop-theme": "^1.0"
 	},
 	"require-dev": {
 		"dealerdirect/phpcodesniffer-composer-installer": "*",
