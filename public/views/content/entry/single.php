@@ -13,12 +13,6 @@
 	<div class="entry-post-thumbnail">
 		<?php the_post_thumbnail( 'creativity-large' ); ?>
 	</div>
-	<header class="entry-header">
-		<?php Backdrop\Theme\Entry\display_title(); ?>
-		<div class="entry-metadata">
-			<?php Backdrop\Theme\Entry\display_date(); ?>
-		</div>
-	</header>
 	<div class="entry-content">
 		<?php the_content(); ?>
 		<?php

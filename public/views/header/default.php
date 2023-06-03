@@ -43,8 +43,12 @@
 				<h1 class="header-image-title"><?php esc_html_e( '(Untitled)', 'creativity' ); ?></h1>
 			<?php } else { ?>
 				<h1 class="header-image-title"><?php the_title(); ?></h1>
-			<?php }
-			?>
+			<?php } ?>
+			<?php if ( is_single() ) { ?>
+				<div class="header-image-metadata">
+					<?php Backdrop\Theme\Entry\display_date(); ?>
+				</div>
+				<?php } ?>
 		<?php } elseif ( is_home() ) { ?>
 			<h1 class="header-image-title"><?php esc_html_e( 'Blog', 'creativity' ); ?></h1>
 		<?php } ?>

@@ -64,11 +64,19 @@ add_action('wp_enqueue_scripts', function() {
 				padding: 0;
 				text-align: center;
 			}
+
 			.header-image .header-description {
 				line-height: 1.8rem;
 				color: #ffffff;
 				margin: 0 auto;
 				max-width: 768px;
+				text-align: center;
+			}
+
+			.header-image .header-image-metadata {
+				color: #ffffff;
+				font-family: Tangerine;
+				font-size: 1.8rem;
 				text-align: center;
 			}
 		";
