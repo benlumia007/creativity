@@ -44,7 +44,7 @@
 			<?php } else { ?>
 				<h1 class="header-image-title"><?php the_title(); ?></h1>
 			<?php } ?>
-			<?php if ( is_single() ) { ?>
+			<?php if ( get_post_type() === 'post' ) { ?>
 				<div class="header-image-metadata">
 					<?php Backdrop\Theme\Entry\display_date(); ?>
 				</div>
