@@ -12,30 +12,34 @@
  */
 
 /** ------------------------------------------------------------------------------------------
- * Load composer files.
+ * Bootstrap the theme.
  * -------------------------------------------------------------------------------------------
- * Please load the composer files first to ensure that any classes or functions that we may
- * require are available through autoload.
+ * Load the bootstrap files. Note that autoload should happen first so that any classes or
+ * functions are available that we might need.
  */
 
-if ( file_exists( get_parent_theme_file_path( '/vendor/autoload.php' ) ) ) {
-	require_once get_parent_theme_file_path( '/vendor/autoload.php' );
-}
+require_once get_parent_theme_file_path( 'app/bootstrap-autoload.php' );
+require_once get_parent_theme_file_path( 'app/framework.php' );
 
 # ------------------------------------------------------------------------------
-# Autoload functions files.
+# Compatibility check.
 # ------------------------------------------------------------------------------
 #
-# Load any functions-files from the `/app` folder that are needed. Add additional
-# files to the array without the `.php` extension.
+# Check that the site meets the minimum requirements for the theme before
+# proceeding if this is a theme for public release. If building for a client
+# that meets these requirements, this code is unnecessary.
 
-array_map( function( $file ) {
-	require_once( get_parent_theme_file_path( "app/{$file}.php" ) ); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
-}, [
-	'CodePotent/UpdateClient',
-	'Site/functions-site',
-	'framework',
-	'functions-extras',
-	'functions-scripts',
-	'functions-setup',
-] );
+if ( true === Backdrop\Theme\is_classicpress() ) {
+	if ( version_compare( classicpress_version(), '1.5.0', '<' ) || version_compare( PHP_VERSION, '7.1', '<' ) ) {
+
+		require_once( get_parent_theme_file_path( 'app/bootstrap-compat.php' ) );
+		return;
+	}
+} else {
+	if ( version_compare( $GLOBALS['wp_version'], $GLOBALS['wp_version'], '==' ) ) {
+
+		require_once get_parent_theme_file_path( 'app/bootstrap-wp-compat.php' );
+	}
+}
+
+
