@@ -61,7 +61,7 @@ function creativity_compat_message(): string {
 
 	if ( version_compare( $GLOBALS['wp_version'], $GLOBALS['wp_version'], '==' ) ) {
 		return sprintf(
-		// Translators: 1 is the required WordPress version and 2 is the user's current version.
+			// Translators: 1 is the required WordPress version and 2 is the user's current version.
 			__( 'Creativity does not work with your version of WordPress! Please consider using ClassicPress version %1$s or higher.', 'creativity' ),
 			'1.5.0'
 		);
