@@ -63,7 +63,7 @@ function creativity_compat_message(): string {
 
 		return sprintf(
 		// Translators: 1 is the required WordPress version and 2 is the user's current version.
-			__( 'Exhale requires at least WordPress version %1$s. You are running version %2$s. Please upgrade and try again.', 'exhale' ),
+			__( 'Exhale requires at least WordPress version %1$s. You are running version %2$s. Please upgrade and try again.', 'creativity' ),
 			'1.5.0',
 			classicpress_version()
 		);
@@ -72,7 +72,7 @@ function creativity_compat_message(): string {
 
 		return sprintf(
 		// Translators: 1 is the required PHP version and 2 is the user's current version.
-			__( 'Exhale requires at least PHP version %1$s. You are running version %2$s. Please upgrade and try again.', 'exhale' ),
+			__( 'Exhale requires at least PHP version %1$s. You are running version %2$s. Please upgrade and try again.', 'creativity' ),
 			'7.1',
 			PHP_VERSION
 		);
