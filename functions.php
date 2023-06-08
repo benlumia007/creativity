@@ -29,7 +29,7 @@ require_once get_parent_theme_file_path( 'app/framework.php' );
 # proceeding if this is a theme for public release. If building for a client
 # that meets these requirements, this code is unnecessary.
 
-if ( version_compare( classicpress_version(), '1.5.0', '<' ) || version_compare( PHP_VERSION, '7.1', '<' ) ) {
+if ( version_compare( '1.5.3', '1.5.0', '<' ) || version_compare( PHP_VERSION, '7.1', '<' ) ) {
 
 	require_once( get_parent_theme_file_path( 'app/bootstrap-compat.php' ) );
 	return;
