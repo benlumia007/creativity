@@ -61,7 +61,7 @@ add_action( 'init', function() {
 
 	register_nav_menus( [
 		'primary'	=> esc_html__( 'Primary Navigation', 'creativity' ),
-		'secondary' => esc_html__( 'Secondary Navigation', 'creativity' )
+		'social' => esc_html__( 'Social Navigation', 'creativity' )
 	] );
 
 }, 5 );
@@ -155,3 +155,17 @@ add_action( 'after_setup_theme', function() {
 		],
 	] );
 } );
+
+function embed_social_icons($items, $args) {
+
+}
+add_filter('wp_nav_menu_objects', function( $items, $args ) {
+	if ($args->theme_location === 'social') {
+		foreach ($items as $item) {
+			$icon_class = sanitize_title($item->title);
+			$svg_icon   = file_get_contents( get_parent_theme_file_path( "/public/svg/$icon_class.svg") );
+			$item->title = $svg_icon;
+		}
+	}
+	return $items;
+}, 10, 2 ) ;

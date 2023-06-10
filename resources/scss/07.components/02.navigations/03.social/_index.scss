@@ -1,0 +1,31 @@
+.site-social {
+
+	.menu-items {
+		display: flex;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		position: static;
+		justify-content: center;
+
+		.menu-item {
+			left: unset;
+			position: relative;
+			width: max-content;
+			height: 30px;
+			width:  30px;
+			margin: 0 0.5rem;
+			padding: 0 0 1rem 0;
+
+			a {
+
+				svg {
+					background: white;
+					border: 2px solid white;
+
+
+				}
+			}
+		}
+	}
+}
