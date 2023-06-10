@@ -196,7 +196,7 @@ class UpdateClient {
 			// This will make the jQuery below work with various languages.
 			// Swap "Compatible up to: 4.9.99" with "Compatible up to: 1.1.1".
 			// Text domains are missing because the strings are already in CP.
-			echo '<script>jQuery(document).ready(function($){$("ul li:contains(4.9.99)").html("<strong>'.esc_html__('Compatible up to:').'</strong> '.esc_html($this->cp_latest_version).'");$(".fyi h3:contains('.esc_html__('Reviews').')").hide();$(".fyi p:contains('.esc_html__('Read all reviews').')").hide();});</script>'."\n"; // phpcs:ignore WordPress.WP.I18n.MissingArgDomain
+			echo '<script>jQuery(document).ready(function($){$("ul li:contains(4.9.99)").html("<strong>'.esc_html__('Compatible up to:', 'creativity').'</strong> '.esc_html($this->cp_latest_version).'");$(".fyi h3:contains('.esc_html__('Reviews', 'creativity').')").hide();$(".fyi p:contains('.esc_html__('Read all reviews', 'creativity').')").hide();});</script>'."\n"; // phpcs:ignore WordPress.WP.I18n.MissingArgDomain
 			// Styles for the modal window.
 			echo '<style>'."\n";
 			// Hide the ratings text and links to WP.org reviews.
@@ -393,7 +393,7 @@ class UpdateClient {
 		if ($this->identifier === $component_file) {
 			$anchors_string = implode('', $component_meta);
 			// Text domains are missing because the strings are already in CP.
-			$anchor_text = esc_html__('View details'); // phpcs:ignore WordPress.WP.I18n.MissingArgDomain
+			$anchor_text = esc_html__('View details', 'creativity'); // phpcs:ignore WordPress.WP.I18n.MissingArgDomain
 			if (!preg_match('|(\<a[ \s\S\d]*)('.$anchor_text.')(<\/a>)|', $anchors_string)) {
 				if (is_multisite()) {
 					if(current_user_can('update_plugins')) {
