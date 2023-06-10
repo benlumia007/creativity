@@ -11,7 +11,8 @@ if ( has_nav_menu( $data->location ) ) { ?>
 			'menu_id'           => 'menu-social-items',
 			'menu_class'        => 'menu-items',
 			'depth'             => 1,
-			'fallback_cb'       => '',
+			'items_wrap'     => '<ul class="%2$s">%3$s</ul>',
+			'item_spacing'   => 'discard'
 		));
 		?>
 	</nav>

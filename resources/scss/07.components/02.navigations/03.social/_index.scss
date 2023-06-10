@@ -12,16 +12,17 @@
 			left: unset;
 			position: relative;
 			width: max-content;
-			height: 30px;
-			width:  30px;
+			height: 24px;
+			width:  24px;
 			margin: 0 0.5rem;
 			padding: 0 0 1rem 0;
 
 			a {
+				color: white;
 
 				svg {
-					background: white;
-					border: 2px solid white;
+					color: white;
+					flex-shrink: 0;
 
 
 				}
