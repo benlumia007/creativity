@@ -15,7 +15,7 @@ use WP_Customize_Manager;
 
 use Backdrop\Customize\Controls\RadioImage;
 
-use function Backdrop\Mix\Manifest\asset;
+use function Backdrop\Mix\asset;
 
 class Component implements Customize {
 
