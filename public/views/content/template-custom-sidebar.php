@@ -14,11 +14,11 @@
 		<main id="main" class="content-area">
 			<?php if ( have_posts() ) : ?>
 				<?php while( have_posts() ) : the_post(); ?>
-					<?php Backdrop\Template\View\display( 'content/entry/page' ); ?>
+					<?php Backdrop\View\display( 'content/entry/page' ); ?>
 				<?php endwhile; ?>
 				<?php comments_template(); ?>
 			<?php endif; ?>
 		</main>
-		<?php Backdrop\Template\View\display( 'sidebar','custom', [ 'location' => 'custom' ] ); ?>
+		<?php Backdrop\View\display( 'sidebar','custom', [ 'location' => 'custom' ] ); ?>
 	</div>
 </section>
