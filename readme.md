@@ -33,3 +33,10 @@ Since Creativity is a parent theme, you'll want to create a child theme if you p
 </pre>
 
 From this point, you simply need to start adding your own styles. The parent theme styles will automatically be loaded for you.
+
+## Copyright & License
+Creativity is licensed under the GNU Public License, version 2 or  later (GPL).
+
+This theme is copyrighted to [Benjamin Lu](https://benjlu.com)
+
+2023. © Benjamin Lu
