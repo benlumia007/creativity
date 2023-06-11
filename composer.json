@@ -21,7 +21,7 @@
 		"php": ">=7.1",
 		"benlumia007/backdrop": "^1.0",
 		"benlumia007/backdrop-customize": "^1.0",
-		"benlumia007/backdrop-fonts": "dev-new-system",
+		"benlumia007/backdrop-fonts": "1.0",
 		"benlumia007/backdrop-mix-manifest": "^1.0",
 		"benlumia007/backdrop-template-hierarchy": "^1.0",
 		"benlumia007/backdrop-template-manager": "^1.0",
