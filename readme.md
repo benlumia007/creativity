@@ -35,7 +35,12 @@ Since Creativity is a parent theme, you'll want to create a child theme if you p
 From this point, you simply need to start adding your own styles. The parent theme styles will automatically be loaded for you.
 
 ## Credits
+This theme bundles the following resources
+* [FontAwesome](https://fontawesome.com) - [CC by 4.0 License](https://creativecommons.org/licenses/by/4.0)
+* [Backdrop](https://github.com/backdrop-dev) - By Benjamin Lu - GNU  GPL, version 2 or higher.
+
 This theme makes use of several open-source fonts available via Google Web Fonts.
+
 * [Fira Sans](https://fonts.google.com/specimen/Fira+Sans) ([SIL Open Font License 1.1](http://scripts.sil.org/OFL))
 * [Merriweather](https://fonts.google.com/specimen/Merriweather) ([SIL Open Font License 1.1](http://scripts.sil.org/OFL))
 * [Tangerine](https://fonts.google.com/specimen/Tangerine) ([SIL Open Font License 1.1](http://scripts.sil.org/OFL))
