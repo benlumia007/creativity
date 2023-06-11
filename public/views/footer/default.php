@@ -10,7 +10,7 @@
  */
 ?>
 <footer id="colophon" class="site-footer">
-	<?php Backdrop\Template\View\display( 'menu', 'social', [ 'location' => 'social' ] ); ?>
+	<?php Backdrop\View\display( 'menu', 'social', [ 'location' => 'social' ] ); ?>
 	<div class="site-info">
 		<?php
 		printf(

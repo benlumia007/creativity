@@ -12,7 +12,7 @@
 <section id="content" class="site-content">
 	<main id="main" class="content-area">
 		<?php if ( have_posts() ) : ?>
-			<?php Backdrop\Template\View\display( 'content/entry/archive/portfolio' ); ?>
+			<?php Backdrop\View\display( 'content/entry/archive/portfolio' ); ?>
 		<?php endif; ?>
 	</main>
 </section>

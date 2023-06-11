@@ -16,13 +16,13 @@
 				<div class="loop">
 					<ul class="grid-items grid-col-2">
 						<?php while( have_posts() ) : the_post(); ?>
-							<?php Backdrop\Template\View\display( 'content/entry' ); ?>
+							<?php Backdrop\View\display( 'content/entry' ); ?>
 						<?php endwhile; ?>
 					</ul>
 					<?php the_posts_pagination(); ?>
 				</div>
 			<?php endif; ?>
 		</main>
-		<?php Backdrop\Template\View\display( 'sidebar', 'primary', [ 'location' => 'primary' ] ); ?>
+		<?php Backdrop\View\display( 'sidebar', 'primary', [ 'location' => 'primary' ] ); ?>
 	</div>
 </section>

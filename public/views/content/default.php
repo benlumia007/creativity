@@ -14,11 +14,11 @@
 		<main id="main" class="content-area">
 			<?php if ( have_posts() ) : ?>
 				<?php while( have_posts() ) : the_post(); ?>
-					<?php Backdrop\Template\View\display( 'content/entry' ); ?>
+					<?php Backdrop\View\display( 'content/entry' ); ?>
 				<?php endwhile; ?>
 				<?php the_posts_pagination(); ?>
 			<?php endif; ?>
 		</main>
-		<?php Backdrop\Template\View\display( 'sidebar', 'primary', [ 'location' => 'primary' ] ); ?>
+		<?php Backdrop\View\display( 'sidebar', 'primary', [ 'location' => 'primary' ] ); ?>
 	</div>
 </section>

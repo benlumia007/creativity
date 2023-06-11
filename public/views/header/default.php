@@ -27,7 +27,7 @@
 				<?php Backdrop\Theme\Site\display_site_title(); ?>
 				<?php Backdrop\Theme\Site\display_site_description(); ?>
 			</div>
-			<?php Backdrop\Template\View\display( 'menu', 'primary', [ 'location' => 'primary'] ); ?>
+			<?php Backdrop\View\display( 'menu', 'primary', [ 'location' => 'primary'] ); ?>
 		</div>
 	</header>
 	<div class="header-image">

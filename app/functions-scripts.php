@@ -10,7 +10,8 @@
  */
 
 namespace Creativity;
-use function Backdrop\Mix\Manifest\asset;
+
+use function Backdrop\Mix\asset;
 
 /**
  * Enqueue Scripts and Styles

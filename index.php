@@ -8,4 +8,4 @@
  */
 
 // Access the view template engine.
-Backdrop\Template\View\display( 'index' );
+Backdrop\View\display( 'index' );

@@ -13,13 +13,13 @@ $portfolio_display = get_theme_mod( 'portfolio_display' );
 $blog_display      = get_theme_mod( 'blog_display' );
 
 if ( 0 != $home_display && isset( $home_display ) ) {
-	Backdrop\Template\View\display( 'content/section/header' );
+	Backdrop\View\display( 'content/section/header' );
 }
 
 if ( 0 != $portfolio_display && isset( $portfolio_display ) ) {
-Backdrop\Template\View\display( 'content/section/portfolio' );
+Backdrop\View\display( 'content/section/portfolio' );
 }
 
 if ( 0 != $blog_display && isset( $blog_display ) ) {
-Backdrop\Template\View\display( 'content/section/blog' );
+Backdrop\View\display( 'content/section/blog' );
 }
