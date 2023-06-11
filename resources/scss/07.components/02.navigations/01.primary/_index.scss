@@ -35,9 +35,42 @@
 				a {
 					color: color( white );
 					text-decoration: none;
+
 				}
 
+				.dropdown-toggle {
+					background: transparent;
+					border: none;
+					margin: 0;
+					padding: 0;
+					position: absolute;
+					right: 1.250rem;
 
+					.fontawesome {
+						border: 0.063rem solid color( white );
+						color: color( white );
+						font-family: 'Font Awesome 5 Free';
+						font-size: 1.125rem;
+						padding: 0.4rem;
+
+						&:before {
+							content: '';
+							display: inline-block;
+							border: solid white;
+							border-width: 0 4px 4px 0;
+							transform: rotate( -135deg );
+							padding: 4px;
+							margin-right: 0.6rem;
+						}
+					}
+
+					.arrow {
+						border: solid black;
+						border-width: 0 3px 3px 0;
+						display: inline-block;
+						padding: 3px;
+					}
+				}
 
 				.sub-menu {
 					left: -9999rem;
@@ -48,7 +81,30 @@
 				}
 
 				&.toggled-on {
+					.dropdown-toggle {
+						background: transparent;
+						border: none;
+						margin: 0;
+						padding: 0;
+						position: absolute;
+						right: 1.250rem;
 
+						.fontawesome {
+							color: color( white );
+							font-family: 'Font Awesome 5 Free';
+							font-size: 1.25rem;
+
+							&:before {
+								content: '';
+								display: inline-block;
+								border: solid white;
+								border-width: 0 4px 4px 0;
+								transform: rotate(45deg);
+								padding: 4px;
+								margin-right: 0.6rem;
+							}
+						}
+					}
 
 					.sub-menu {
 						background: transparent;
@@ -65,7 +121,7 @@
 
 @media screen and ( min-width: 769px ) {
 	.primary-menu {
-		padding: 1rem;
+		padding: 0.6rem;
 
 		.menu-toggle {
 			display: none;
@@ -92,6 +148,20 @@
 				}
 
 				&.menu-item-has-children {
+					> {
+						a {
+							&:after {
+								content: '';
+								display: inline-block;
+								border: solid white;
+								border-width: 0 4px 4px 0;
+								transform: rotate(45deg);
+								padding: 4px;
+								margin-left: 0.6rem;
+							}
+						}
+					}
+
 					.sub-menu {
 						.menu-item-has-children {
 							a {

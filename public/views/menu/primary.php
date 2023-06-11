@@ -10,7 +10,7 @@ if ( has_nav_menu( $data->location ) ) { ?>
 				'container'      => '',
 				'menu_id'        => 'primary-menu',
 				'menu_class'     => 'menu-items',
-				'depth'          => 1
+				'depth'          => 2
 			)
 		);
 		?>
