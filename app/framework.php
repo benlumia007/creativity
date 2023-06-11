@@ -31,7 +31,6 @@ $creativity = Backdrop\booted() ? Backdrop\app() : new Backdrop\Core\Application
  */
 
 $creativity->provider( Backdrop\Fonts\Provider::class );
-$creativity->provider( Backdrop\FontAwesome\Provider::class );
 $creativity->provider( Backdrop\Mix\Manifest\Provider::class );
 $creativity->provider( Backdrop\Template\Hierarchy\Provider::class );
 $creativity->provider( Backdrop\Template\Manager\Provider::class );

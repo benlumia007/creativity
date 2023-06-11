@@ -34,4 +34,3 @@ if ( version_compare( '1.5.3', '1.5.0', '<' ) || version_compare( PHP_VERSION, '
 	require_once( get_parent_theme_file_path( 'app/bootstrap-compat.php' ) );
 	return;
 }
-

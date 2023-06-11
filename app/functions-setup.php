@@ -13,12 +13,14 @@
 
 namespace Creativity;
 
+use function Hybrid\Font\enqueue;
+
 /**
  * Set up theme support.
  *
- * @since  1.0.0
- * @access public
  * @return void
+ *@since  1.0.0
+ * @access public
  */
 
 add_action( 'after_setup_theme', function() {
@@ -169,3 +171,15 @@ add_filter('wp_nav_menu_objects', function( $items, $args ) {
 	}
 	return $items;
 }, 10, 2 ) ;
+
+// Example usage
+add_action( 'wp_enqueue_scripts', function() {
+
+	array_map( function( $file ) {
+		enqueue( $file );
+	}, [
+		'fira-sans',
+		'merriweather',
+		'tangerine'
+	] );
+} );
