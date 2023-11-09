@@ -158,19 +158,27 @@ add_action( 'after_setup_theme', function() {
 	] );
 } );
 
-function embed_social_icons($items, $args) {
+add_filter( 'wp_nav_menu_objects', function( $items, $args ) {
+    if ( $args->theme_location === 'social' ) {
+        foreach( $items as $item ) {
+            $icon_class = sanitize_title( $item->title );
+            $svg_icon_path = get_parent_theme_file_path( "/public/svg/$icon_class.svg" );
 
-}
-add_filter('wp_nav_menu_objects', function( $items, $args ) {
-	if ($args->theme_location === 'social') {
-		foreach ($items as $item) {
-			$icon_class = sanitize_title($item->title);
-			$svg_icon   = file_get_contents( get_parent_theme_file_path( "/public/svg/$icon_class.svg") );
-			$item->title = $svg_icon;
-		}
-	}
-	return $items;
-}, 10, 2 ) ;
+            // Check if the SVG icon file exists, and if not, use a default icon.
+            if (file_exists($svg_icon_path)) {
+                $svg_icon = file_get_contents($svg_icon_path);
+                $item->title = $svg_icon;
+            } else {
+                // Replace with a default icon code (e.g., a font-awesome icon).
+                $default_icon = file_get_contents( get_parent_theme_file_path("/public/svg/default.svg") );
+                $item->title = $default_icon;
+            }
+        }
+    }
+
+    return $items;
+}, 10, 2);
+
 
 // Example usage
 add_action( 'wp_enqueue_scripts', function() {
