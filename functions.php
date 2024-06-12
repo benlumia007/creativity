@@ -20,17 +20,3 @@
 
 require_once get_parent_theme_file_path( 'app/bootstrap-autoload.php' );
 require_once get_parent_theme_file_path( 'app/framework.php' );
-
-# ------------------------------------------------------------------------------
-# Compatibility check.
-# ------------------------------------------------------------------------------
-#
-# Check that the site meets the minimum requirements for the theme before
-# proceeding if this is a theme for public release. If building for a client
-# that meets these requirements, this code is unnecessary.
-
-if ( version_compare( '1.5.3', '1.5.0', '<' ) || version_compare( PHP_VERSION, '7.1', '<' ) ) {
-
-	require_once( get_parent_theme_file_path( 'app/bootstrap-compat.php' ) );
-	return;
-}
