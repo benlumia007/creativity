@@ -58,12 +58,12 @@
 
 		.left-sidebar {
 			.content-area {
-				float: left;
+				float: right;
 				width: 70.1171875%
 			}
 
 			.widget-area {
-				float: right;
+				float: left;
 				width: 28.125%;
 			}
 		}
@@ -84,6 +84,18 @@
 		}
 
 		.left-sidebar {
+			.content-area {
+				float: right;
+				width: 69.743589743589744%
+			}
+
+			.widget-area {
+				float: left;
+				width: 28.717948717948718%;
+			}
+		}
+
+		.right-sidebar {
 			.content-area {
 				float: left;
 				width: 69.743589743589744%
