@@ -13,7 +13,7 @@ namespace Creativity\Customize\Home;
 use Backdrop\Customize\Component as Customize;
 use WP_Customize_Manager;
 
-class Component implements Customize {
+class Component extends Customize {
 
 	public function boot() {
 		add_action( 'customize_register', [ $this, 'panels' ], 0 );
@@ -65,12 +65,15 @@ class Component implements Customize {
 
 		$displays = [
 			'home_display' => [
+				'default' 			=> false,
 				'sanitize_callback' => 'Backdrop\Customize\Helpers\Sanitize::checkbox',
 			],
 			'portfolio_display' => [
+				'default'   		=> false,
 				'sanitize_callback' => 'Backdrop\Customize\Helpers\Sanitize::checkbox',
 			],
 			'blog_display' => [
+				'default'           => false,
 				'sanitize_callback' => 'Backdrop\Customize\Helpers\Sanitize::checkbox',
 			]
 		];
