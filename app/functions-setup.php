@@ -13,7 +13,8 @@
 
 namespace Creativity;
 
-use function Hybrid\Font\enqueue;
+use function Backdrop\Fonts\enqueue;
+use function Backdrop\Theme\is_classicpress;
 
 /**
  * Set up theme support.
@@ -40,14 +41,11 @@ add_action( 'after_setup_theme', function() {
 	// Adds featured image support.
 	add_theme_support( 'post-thumbnails' );
 
-	// Outputs HTML5 markup for core features.
-	add_theme_support( 'html5', [
-		'caption',
-		'comment-form',
-		'comment-list',
-		'gallery',
-		'search-form'
-	] );
+	if ( ! is_classicpress() ) {
+
+		// Outputs HTML5 markup for core features.
+		add_theme_support( 'html5', [ 'caption', 'comment-form', 'comment-list', 'gallery', 'search-form' ] );
+	}
 }, 5 );
 
 /**
