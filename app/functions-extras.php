@@ -9,6 +9,8 @@
  * @link      https://luthemes.com/portfolio/creativity
  */
 
+ use function Backdrop\Theme\is_plugin_active;
+
 /**
  * Changes the theme template path to the `public/views` folder.
  *
@@ -31,13 +33,11 @@ add_filter( 'backdrop/template/path', function() {
  */
 add_action( 'backdrop/templates/register', function( $templates ) {
 
-	if ( function_exists( 'is_plugin_active' ) ) {
-		if ( is_plugin_active( 'backdrop-custom-portfolio/backdrop-custom-portfolio.php' ) ) {
-			$templates->add( 'template-home.php', [
-				'label' => esc_html__( 'Home', 'creativity' ),
-				'post_types' => 'page',
-			] );
-		}
+	if ( is_plugin_active( 'backdrop-custom-portfolio/backdrop-custom-portfolio.php' ) ) {
+		$templates->add( 'template-home.php', [
+			'label' => esc_html__( 'Home', 'creativity' ),
+			'post_types' => 'page',
+		] );
 	}
 
 	$templates->add( 'template-left-sidebar.php', [
