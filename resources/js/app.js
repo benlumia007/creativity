@@ -10,3 +10,8 @@
  * @license   https://www.gnu.org/licenses/gpl-2.0.html
  * @link      https://luthemes.com/portfolio/generosity
  */
+( function( $ ) {
+    $( document ).ready( function() {
+        $('.search-submit').remove();
+    });
+} )( jQuery );
