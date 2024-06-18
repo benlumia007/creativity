@@ -17,7 +17,7 @@ use Backdrop\Customize\Controls\RadioImage;
 
 use function Backdrop\Mix\asset;
 
-class Component implements Customize {
+class Component extends Customize {
 
 	public function boot() {
 		add_action( 'customize_register', [ $this, 'panels' ] );
