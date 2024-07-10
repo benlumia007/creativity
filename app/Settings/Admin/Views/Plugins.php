@@ -5,6 +5,10 @@
  * Displays the plugin recommendations view (tab) on the settings page.
  *
  * @package   Creativity
+ * @author    Benjamin Lu <benlumia007@gmail.com>
+ * @copyright 2023. Benjamin Lu
+ * @license   https://www.gnu.org/licenses/gpl-2.0.html
+ * @link      https://luthemes.com/portfolio/creativity
  */
 
 namespace Creativity\Settings\Admin\Views;

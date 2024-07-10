@@ -4,12 +4,11 @@
  *
  * Displays the theme settings page in the admin.
  *
- * @package    creativity
- * @subpackage Admin
- * @author     Justin Tadlock <justintadlock@gmail.com>
- * @copyright  Copyright (c) 2009 - 2018, Justin Tadlock
- * @link       https://themehybrid.com/plugins/members
- * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ * @package   Creativity
+ * @author    Benjamin Lu <benlumia007@gmail.com>
+ * @copyright 2023. Benjamin Lu
+ * @license   https://www.gnu.org/licenses/gpl-2.0.html
+ * @link      https://luthemes.com/portfolio/creativity
  */
 
 namespace Creativity\Settings\Admin;

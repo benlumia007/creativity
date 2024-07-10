@@ -4,11 +4,11 @@
  *
  * Handles outputting the title and content for the 404 Not Found error page.
  *
- * @package   Exhale
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright 2019 Justin Tadlock
- * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://themehybrid.com/themes/exhale
+ * @package   Creativity
+ * @author    Benjamin Lu <benlumia007@gmail.com>
+ * @copyright 2023. Benjamin Lu
+ * @license   https://www.gnu.org/licenses/gpl-2.0.html
+ * @link      https://luthemes.com/portfolio/creativity
  */
 
 namespace Creativity\Template;
