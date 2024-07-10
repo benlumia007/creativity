@@ -13,6 +13,7 @@ namespace Creativity;
 
 use function Backdrop\Mix\asset;
 use Creativity\Template\ErrorPage;
+use Creativity\Settings\Options;
 
 /**
  * Enqueue Scripts and Styles

@@ -225,7 +225,6 @@ class General extends View {
 
 		$dropdown = wp_dropdown_pages( [
 			'name'              => 'creativity_settings[error_page]',
-			'show_option_none'  => '-',
 			'option_none_value' => 0,
 			'selected'          => Options::get( 'error_page' ), // phpcs:ignore
 			'post_status'       => [ 'private' ],
@@ -236,17 +235,22 @@ class General extends View {
 			<label>
 				<?php if ( $dropdown ) : ?>
 
-					<?php $dropdown ?>
+					<?php echo wp_kses( $dropdown, [
+                    'select' => [
+                        'name' => true,
+                        'id' => true
+                    ],
+                    'option' => [
+                        'value' => true,
+                        'selected' => true
+                    ]
+                ] ); ?>
 
 				<?php else : ?>
 
-					<select name="creativity_settings[error_page]">
-						<option value="0" selected="selected"><?php esc_html_e( 'No Private Pages', 'creativity' ) ?></option>
-					</select>
-
 					<?php if ( current_user_can( 'publish_pages' ) ) : ?>
 
-						<a href="<?php esc_url( add_query_arg( 'post_type', 'page', admin_url( 'post-new.php' ) ) ) ?>"><?php esc_html_e( 'Add New Page', 'creativity' ) ?></a>
+						<a href="<?php echo esc_url( add_query_arg( 'post_type', 'page', admin_url( 'post-new.php' ) ) ) ?>"><?php esc_html_e( 'Add New Page', 'creativity' ) ?></a>
 
 					<?php endif ?>
 
