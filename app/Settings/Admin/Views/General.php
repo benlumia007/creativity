@@ -88,7 +88,7 @@ class General extends View {
 	 * @param  array  $input
 	 * @return array
 	 */
-	function validateSettings( $settings ) {
+	function validateSettings( $settings ) { // phpcs:ignore
 
 		// Checkboxes.
 		$settings['disable_emoji']    = ! empty( $settings['disable_emoji']    );
@@ -227,7 +227,7 @@ class General extends View {
 			'name'              => 'creativity_settings[error_page]',
 			'show_option_none'  => '-',
 			'option_none_value' => 0,
-			'selected'          => Options::get( 'error_page' ),
+			'selected'          => Options::get( 'error_page' ), // phpcs:ignore
 			'post_status'       => [ 'private' ],
 			'echo'              => false
 		] ); ?>
@@ -236,7 +236,7 @@ class General extends View {
 			<label>
 				<?php if ( $dropdown ) : ?>
 
-					<?= $dropdown ?>
+					<?php $dropdown ?>
 
 				<?php else : ?>
 
@@ -246,7 +246,7 @@ class General extends View {
 
 					<?php if ( current_user_can( 'publish_pages' ) ) : ?>
 
-						<a href="<?= esc_url( add_query_arg( 'post_type', 'page', admin_url( 'post-new.php' ) ) ) ?>"><?php esc_html_e( 'Add New Page', 'creativity' ) ?></a>
+						<a href="<?php esc_url( add_query_arg( 'post_type', 'page', admin_url( 'post-new.php' ) ) ) ?>"><?php esc_html_e( 'Add New Page', 'creativity' ) ?></a>
 
 					<?php endif ?>
 

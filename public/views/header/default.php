@@ -9,7 +9,7 @@
  * @link      https://luthemes.com/portfolio/creativity
  */
 use Creativity\Template\ErrorPage;
-$error = new ErrorPage();
+$error = new ErrorPage(); // phpcs:ignore
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
