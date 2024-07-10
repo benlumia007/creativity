@@ -8,6 +8,8 @@
  * @license   https://www.gnu.org/licenses/gpl-2.0.html
  * @link      https://luthemes.com/portfolio/creativity
  */
+use Creativity\Template\ErrorPage;
+$error = new ErrorPage();
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -51,5 +53,8 @@
 				<?php } ?>
 		<?php } elseif ( is_home() ) { ?>
 			<h1 class="header-image-title"><?php esc_html_e( 'Blog', 'creativity' ); ?></h1>
+		<?php } elseif ( is_404() ) { ?>
+			<?php $error->setup(); ?>
+			<h1 class="header-image-title"><?php $error->displayTitle(); ?></h1>
 		<?php } ?>
 	</div>

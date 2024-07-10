@@ -12,16 +12,13 @@
 <section id="content" class="site-content clear">
 	<div id="global-layout" class="<?php echo esc_attr( get_theme_mod( 'global_layout', 'left-sidebar' ) ); ?>">
 		<main id="main" class="content-area">
-			<?php if ( have_posts() ) : ?>
-				<div class="loop">
-					<ul class="grid-items grid-col-2">
-						<?php while( have_posts() ) : the_post(); ?>
-							<?php Backdrop\View\display( 'content/entry' ); ?>
-						<?php endwhile; ?>
-					</ul>
-					<?php the_posts_pagination(); ?>
+			<?php $error->setup(); ?>
+			<article id="post-0" class="page">
+				<div class="entry-content">
+					<?php $error->displayContent(); ?>
 				</div>
-			<?php endif; ?>
+			</article>
+
 		</main>
 		<?php Backdrop\View\display( 'sidebar', 'primary', [ 'location' => 'primary' ] ); ?>
 	</div>
