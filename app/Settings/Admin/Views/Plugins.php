@@ -11,6 +11,8 @@ namespace Creativity\Settings\Admin\Views;
 
 use function esc_html__;
 use function get_plugins;
+use function wp_remote_get;
+use function wp_remote_retrieve_body;
 
 /**
  * Plugin recommendations view class.
@@ -43,6 +45,56 @@ class Plugins extends View {
     }
 
     /**
+     * Checks if the plugin is installed.
+     *
+     * @param string $slug The plugin slug.
+     * @return bool True if the plugin is installed, false otherwise.
+     */
+    private function is_plugin_installed( $slug ) {
+        $all_plugins = get_plugins();
+        foreach ( $all_plugins as $plugin_path => $plugin_info ) {
+            if ( strpos( $plugin_path, $slug ) !== false ) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * Fetches plugin data from the ClassicPress Directory API.
+     *
+     * @param string $slug The plugin slug.
+     * @return array|false The plugin data or false on failure.
+     */
+    private function fetch_plugin_data_cp( $slug ) {
+        $response = wp_remote_get( "https://directory.classicpress.net/wp-json/wp/v2/plugins?byslug={$slug}" );
+        if ( is_wp_error( $response ) ) {
+            return false;
+        }
+
+        $body = wp_remote_retrieve_body( $response );
+        $data = json_decode( $body, true );
+        return $data ? $data[0] : false;
+    }
+
+    /**
+     * Fetches plugin data from the WordPress Plugin API.
+     *
+     * @param string $slug The plugin slug.
+     * @return array|false The plugin data or false on failure.
+     */
+    private function fetch_plugin_data_wp( $slug ) {
+        $response = wp_remote_get( "https://api.wordpress.org/plugins/info/1.0/{$slug}.json" );
+        if ( is_wp_error( $response ) ) {
+            return false;
+        }
+
+        $body = wp_remote_retrieve_body( $response );
+        $data = json_decode( $body, true );
+        return $data;
+    }
+
+    /**
      * Renders the plugin recommendations.
      *
      * @since  1.0.0
@@ -51,21 +103,11 @@ class Plugins extends View {
      */
     public function template() {
         $plugins = [
-            [
-                'slug' => 'backdrop-custom-portfolio',
-                'name' => 'Backdrop Custom Portfolio',
-                'author' => 'Backdrop',
-                'description' => 'A plugin to create and manage custom portfolio items.',
-                'homepage' => 'https://www.backdropcms.org'
-            ],
-            [
-                'slug' => 'regenerate-thumbnails',
-                'name' => 'Regenerate Thumbnails',
-                'author' => 'Viper007Bond',
-                'description' => 'Allows you to regenerate your thumbnails after changing the thumbnail sizes.',
-                'homepage' => 'https://wordpress.org/plugins/regenerate-thumbnails/'
-            ]
+            'backdrop-custom-portfolio' => 'classicpress',
+            'regenerate-thumbnails' => 'wordpress'
         ];
+
+        $cpdi_installed = $this->is_plugin_installed('classicpress-directory-integration');
         ?>
         <style>
             .plugin-card {
@@ -74,6 +116,8 @@ class Plugins extends View {
                 background: #fff;
                 float: left;
                 box-sizing: border-box;
+                margin: 5px;
+                padding: 20px;
             }
             .plugin-card h3 {
                 margin: 0 0 10px;
@@ -107,22 +151,51 @@ class Plugins extends View {
             <p><?php esc_html_e('The following plugins are not required, but are highly recommended to enhance your website functionality:', 'creativity'); ?></p>
         </div>
         <?php
-        foreach ( $plugins as $plugin ) {
-            ?>
-            <div class="plugin-card">
-                <div class="plugin-card-top">
-                    <div class="name column-name">
-                        <h3>
-                            <?php echo esc_html( $plugin['name'] ); ?>
-                        </h3>
+        foreach ( $plugins as $slug => $source ) {
+            $plugin_data = $source === 'classicpress' ? $this->fetch_plugin_data_cp( $slug ) : $this->fetch_plugin_data_wp( $slug );
+            if ( $plugin_data ) {
+                ?>
+                <div class="plugin-card">
+                    <div class="plugin-card-top">
+                        <div class="name column-name">
+                            <h3>
+                                <?php echo esc_html( $source === 'classicpress' ? $plugin_data['title']['rendered'] : $plugin_data['name'] ); ?>
+                            </h3>
+                        </div>
+                        <div class="desc column-description">
+                            <p><?php echo esc_html( $source === 'classicpress' ? strip_tags( $plugin_data['excerpt']['rendered'] ) : strip_tags( $plugin_data['short_description'] ?? 'Description not available.' ) ); ?></p>
+                            <p class="authors"><?php echo esc_html__( 'By ', 'creativity' ) . esc_html( $source === 'classicpress' ? $plugin_data['meta']['developer_name'] : strip_tags( $plugin_data['author'] ) ); ?></p>
+                            <?php if ( $source === 'classicpress' ) : ?>
+                                <p><?php echo esc_html__( 'Active Installations: ', 'creativity' ) . esc_html( $plugin_data['meta']['active_installations'] ); ?></p>
+                            <?php endif; ?>
+                        </div>
                     </div>
-                    <div class="desc column-description">
-                        <p><?php echo esc_html( $plugin['description'] ); ?></p>
-                        <p class="authors"><?php echo esc_html__( 'By ', 'creativity' ) . esc_html( $plugin['author'] ); ?></p>
-                    </div>
+                    <?php if ( !$cpdi_installed ) : ?>
+                        <div class="plugin-card-bottom">
+                            <?php esc_html_e( 'ClassicPress Directory Integration must be installed first.', 'creativity' ); ?>
+                        </div>
+                    <?php endif; ?>
                 </div>
-            </div>
-            <?php
+                <?php
+            } else {
+                ?>
+                <div class="plugin-card">
+                    <div class="plugin-card-top">
+                        <div class="name column-name">
+                            <h3><?php echo esc_html( ucwords( str_replace( '-', ' ', $slug ) ) ); ?></h3>
+                        </div>
+                        <div class="desc column-description">
+                            <p><?php esc_html_e( 'Description not available.', 'creativity' ); ?></p>
+                        </div>
+                    </div>
+                    <?php if ( !$cpdi_installed ) : ?>
+                        <div class="plugin-card-bottom">
+                            <?php esc_html_e( 'ClassicPress Directory Integration must be installed first.', 'creativity' ); ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+                <?php
+            }
         }
     }
 }
