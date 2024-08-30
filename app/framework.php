@@ -47,8 +47,15 @@ $creativity->provider( Backdrop\View\Provider::class );
  * the application. These service providers offer supplementary features to the theme.
  */
 
-$creativity->provider( Creativity\CleanCP\Provider::class );
-$creativity->provider( Creativity\Settings\Provider::class );
+ $creativity->provider( Creativity\Provider::class );
+
+ array_map( function( $component ) use ( $creativity ) {
+    $creativity->provider( "Creativity\\{$component}\\Provider" );
+}, [
+    'CleanCP',
+    'Customize',
+    'Settings'
+] );
 
  if ( is_plugin_or_class_active( 'backdrop-custom-portfolio/backdrop-custom-portfolio.php' ) ) {
 	$creativity->provider( Creativity\Customize\Home\Provider::class );

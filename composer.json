@@ -18,16 +18,17 @@
 		}
 	},
 	"require": {
-		"php": ">=7.1",
-		"backdrop-dev/framework": "^1.0",
-		"backdrop-dev/customize": "^1.0",
-		"backdrop-dev/fonts": "^1.0",
-		"backdrop-dev/languages": "^1.0",
-		"backdrop-dev/mix": "^1.0",
-		"backdrop-dev/template-hierarchy": "^1.0",
-		"backdrop-dev/template-manager": "^1.0",
-		"backdrop-dev/view": "^1.0",
-		"backdrop-dev/theme": "^1.0"
+		"php": ">=7.4",
+		"backdrop-dev/customize": "dev-develop",
+		"backdrop-dev/fonts": "dev-develop",
+		"backdrop-dev/framework": "dev-develop",
+		"backdrop-dev/languages": "dev-develop",
+		"backdrop-dev/mix": "dev-develop",
+		"backdrop-dev/pagination": "dev-develop",
+		"backdrop-dev/template-hierarchy": "dev-develop",
+		"backdrop-dev/template-manager": "dev-develop",
+		"backdrop-dev/theme": "dev-develop",
+		"backdrop-dev/view": "dev-develop"
 	},
 	"require-dev": {
 		"dealerdirect/phpcodesniffer-composer-installer": "*",
