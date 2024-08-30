@@ -28,7 +28,7 @@ function sep( $sep = '' ) {
 		'creativity/sep',
 		sprintf(
 			' <span class="sep">%s</span> ',
-			$sep ?: esc_html_x( '&middot;', 'meta separator', creativity )
+			$sep ?: esc_html_x( '&middot;', 'meta separator', 'creativity' )
 		)
 	);
 }

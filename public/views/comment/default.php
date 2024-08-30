@@ -3,7 +3,7 @@
 	<header class="comment-meta">
 		<?php Backdrop\Theme\Comment\display_parent_link( [
 			// Translators: %s is the parent comment link.
-			'text'   => __( 'In reply to %s', creativity ),
+			'text'   => __( 'In reply to %s', 'creativity' ),
 			'depth'  => 3,
 			'class'  => 'comment__parent-link inline-block mb-2',
 			'after'  => '<br /></div>',
@@ -32,7 +32,7 @@
 		<?php if ( ! Backdrop\Theme\Comment\is_approved() ) : ?>
 
 			<p class="comment-moderation">
-				<?php esc_html_e( 'Your comment is awaiting moderation.', creativity ) ?>
+				<?php esc_html_e( 'Your comment is awaiting moderation.', 'creativity' ) ?>
 			</p>
 
 		<?php endif ?>
