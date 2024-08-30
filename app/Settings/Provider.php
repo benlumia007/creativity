@@ -32,7 +32,7 @@ class Provider extends ServiceProvider {
 	 * @access public
 	 * @return void
 	 */
-	public function register() {
+	public function register(): void {
 
 		$this->app->singleton( Views::class );
 
@@ -56,7 +56,7 @@ class Provider extends ServiceProvider {
 	 * @access public
 	 * @return void
 	 */
-	public function boot() {
+	public function boot(): void {
 
 		if ( is_admin() ) {
 			$this->app->resolve( OptionsPage::class )->boot();

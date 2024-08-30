@@ -99,7 +99,7 @@ class OptionsPage implements Bootable {
 	 * @access public
 	 * @return void
 	 */
-	public function boot() {
+	public function boot(): void {
 		add_action( 'admin_menu', [ $this, 'adminMenu' ] );
 	}
 
@@ -352,7 +352,7 @@ class OptionsPage implements Bootable {
 	 */
 	public function currentView() {
 
-		$current = isset( $_GET['view'] ) ? sanitize_key( $_GET['view'] ) : 'general';
+		$current = isset( $_GET['view'] ) ? sanitize_key( $_GET['view'] ) : 'general'; // phpcs:ignore
 
 		if ( isset( $this->views[ $current ] ) ) {
 			return $this->views[ $current ];

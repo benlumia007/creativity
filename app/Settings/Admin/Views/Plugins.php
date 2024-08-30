@@ -167,8 +167,8 @@ class Plugins extends View {
                             </h3>
                         </div>
                         <div class="desc column-description">
-                            <p><?php echo esc_html( $source === 'classicpress' ? strip_tags( $plugin_data['excerpt']['rendered'] ) : strip_tags( $plugin_data['short_description'] ?? 'Description not available.' ) ); ?></p>
-                            <p class="authors"><?php echo esc_html__( 'By ', 'creativity' ) . esc_html( $source === 'classicpress' ? $plugin_data['meta']['developer_name'] : strip_tags( $plugin_data['author'] ) ); ?></p>
+                            <p><?php echo esc_html( $source === 'classicpress' ? wp_strip_all_tags( $plugin_data['excerpt']['rendered'] ) : wp_strip_all_tags( $plugin_data['short_description'] ?? 'Description not available.' ) ); ?></p>
+                            <p class="authors"><?php echo esc_html__( 'By ', 'creativity' ) . esc_html( $source === 'classicpress' ? $plugin_data['meta']['developer_name'] : wp_strip_all_tags( $plugin_data['author'] ) ); ?></p>
                             <?php if ( $source === 'classicpress' ) : ?>
                                 <p><?php echo esc_html__( 'Active Installations: ', 'creativity' ) . esc_html( $plugin_data['meta']['active_installations'] ); ?></p>
                             <?php endif; ?>
