@@ -18,6 +18,8 @@ use Backdrop\Core\ServiceProvider;
 use Creativity\Customize\Footer;
 use Creativity\Customize\Layout;
 
+use function Backdrop\Theme\is_plugin_or_class_active;
+
 class Provider extends ServiceProvider {
 
     /**
@@ -33,10 +35,16 @@ class Provider extends ServiceProvider {
 
         $this->app->singleton( Component::class, function() {
 
-			return new Component( [
+            $components = [
                 Footer\Customize::class,
                 Layout\Customize::class
-			] );
+            ];
+
+            if ( is_plugin_or_class_active( 'backdrop-custom-portfolio/backdrop-custom-portfolio.php' ) ) {
+                $components[] = Home\Customize::class;
+            }
+
+            return new Component( $components );
 		} );
     }
 

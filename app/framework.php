@@ -9,8 +9,6 @@
  * @link      https://luthemes.com/portfolio/creativity
  */
 
-use function Backdrop\Theme\is_plugin_or_class_active;
-
 /** ------------------------------------------------------------------------------------------
  * Create a new application.
  * -------------------------------------------------------------------------------------------
@@ -56,12 +54,6 @@ $creativity->provider( Backdrop\View\Provider::class );
     'Customize',
     'Settings'
 ] );
-
- if ( is_plugin_or_class_active( 'backdrop-custom-portfolio/backdrop-custom-portfolio.php' ) ) {
-	$creativity->provider( Creativity\Customize\Home\Provider::class );
-}
-
-// $creativity->provider( Creativity\Customize\Layouts\Provider::class );
 
 /** ------------------------------------------------------------------------------------------
  * Perform any actions.
