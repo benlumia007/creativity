@@ -31,7 +31,7 @@ class Component implements Bootable {
 	 * @access public
 	 * @return void
 	 */
-	public function boot() {
+	public function boot(): void {
 
 		if ( Options::get( 'disable_emoji' ) ) {
 			remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
