@@ -38,4 +38,5 @@ array_map( function( $file ) {
 	'functions-extras',
 	'functions-filters',
 	'functions-setup',
+	'functions-template'
 ] );
