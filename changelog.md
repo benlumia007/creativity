@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.2.8 - 11.14.2024
+### Ehancement
+- Fixed Pagination and minor stuff
+
 ## 0.2.7 - 08.29.2024
 
 ### Ehancements
